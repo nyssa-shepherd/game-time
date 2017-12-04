@@ -11,7 +11,7 @@ describe('Ball', function() {
   beforeEach(() => {
     ball = new Ball(10, 300, 5, 5, 0, Math.PI * 2, false, 'green');
     paddle = new Paddle(100, 500, 50, 100, 10, 'green');
-  })
+  });
 
   it('should exist as a ball on the page', function() {
     expect(new Ball()).to.be.an.instanceof(Ball);
