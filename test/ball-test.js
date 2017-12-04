@@ -14,9 +14,6 @@ describe('Ball', function() {
   })
 
   it('should exist as a ball on the page', function() {
-    // no longer need this because of the forEach above
-    // var ball = new Ball();
-    // must call capital Ball constructor and new Ball instance
     expect(new Ball()).to.be.an.instanceof(Ball);
   });
 
@@ -58,7 +55,7 @@ describe('Ball', function() {
     expect(ball.y).to.equal(305);
   });
 
-  it.only('should have the y velocity reversed on paddleTouch', function() {
+  it('should have the y velocity reversed on paddleTouch', function() {
     ball.dy = 50;
     ball.move();
     expect(ball.dy).to.equal(50);
