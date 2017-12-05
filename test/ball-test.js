@@ -46,6 +46,7 @@ describe('Ball', function() {
   });
 
   it('should have the x-velocity added to the x upon moving', function() {
+    expect(ball.x).to.equal(15);
     ball.move();
     expect(ball.x).to.equal(15);
   });
@@ -57,6 +58,8 @@ describe('Ball', function() {
 
   it('should have the y velocity reversed on paddleTouch', function() {
     ball.dy = 50;
+    ball.y = 100
+    paddle.y = 100
     ball.move();
     expect(ball.dy).to.equal(50);
     ball.paddleTouch(paddle);
