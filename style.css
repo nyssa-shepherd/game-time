@@ -1,3 +1,13 @@
 #game {
     border: 2px grey dashed;
 }
+
+#start-screen {
+  background-image: url('./img/start-screen.png');
+  background-repeat: no-repeat;
+  display: block;
+  height: 600px;
+  position: absolute;
+  width: 750px;
+  z-index: 1;
+}
