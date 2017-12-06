@@ -1,13 +1,51 @@
+body{
+  background-image: url('https://i.pinimg.com/originals/b9/e2/67/b9e26710f6423b8ac3c8116fc4b44d69.jpg');
+  background-position: center;
+  background-size: 100%;
+  padding: 5% 25%;
+
+}
+
 #game {
-    border: 2px grey dashed;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 #start-screen {
   background-image: url('./img/start-screen.png');
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: 101%;
   display: block;
   height: 600px;
   position: absolute;
   width: 750px;
-/*  z-index: 1;*/
+  z-index: 1;
 }
+
+/*#level2-screen {
+  background-image: url('./img/trump1.svg');
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 750px;
+}*/
+
+/*#level3-screen {
+  background-image: url('./img/start-screen.png');
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 750px;
+}
+
+#win-screen {
+  background-image: url('./img/start-screen.png');
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 750px;
+}
+
+#gameover-screen {
+  background-image: url('./img/trump-loser-tweet.png');
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 750px;
+}*/
