@@ -6,7 +6,7 @@ const Paddle = require('../lib/Paddle.js');
 let ball;
 let paddle;
 
-describe.only('Ball', function() {
+describe('Ball', function() {
 
   beforeEach(() => {
     ball = new Ball(10, 300, 5, 5, 0, Math.PI * 2, false, 'green');
