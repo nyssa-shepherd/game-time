@@ -6,7 +6,7 @@ const Paddle = require('../lib/Paddle.js');
 let ball;
 let paddle;
 
-describe('Ball', function() {
+describe.only('Ball', function() {
 
   beforeEach(() => {
     ball = new Ball(10, 300, 5, 5, 0, Math.PI * 2, false, 'green');
@@ -41,31 +41,29 @@ describe('Ball', function() {
     expect(ball.dx).to.equal(5);
   });
 
-  // come back to this test
-  it.skip('should have a property of move', function() {
-  });
-
   it('should have the x-velocity added to the x upon moving', function() {
-    expect(ball.x).to.equal(15);
+    expect(ball.x).to.equal(10);
     ball.move();
     expect(ball.x).to.equal(15);
   });
 
   it('should have the y-velocity added to the y upon moving', function() {
+    expect(ball.y).to.equal(300);
     ball.move();
     expect(ball.y).to.equal(305);
   });
 
-  it('should have the y velocity reversed on paddleTouch', function() {
-    ball.dy = 50;
-    ball.y = 100
-    paddle.y = 100
+  it('should reverse velocity when it collides with a paddle', function() {
+    let ball = new Ball(50, 100, 5, 5, 0, Math.PI * 2, false)
+    let paddle = new Paddle(55, 105, 0, 0);
+    expect(ball.x).to.equal(50)
     ball.move();
-    expect(ball.dy).to.equal(50);
+    expect(ball.x).to.equal(55);
+    expect(ball.y).to.equal(105);
+    expect(ball.dy).to.equal(5);
     ball.paddleTouch(paddle);
-    // can't get second piece to work
-    // assert.equal(ball.dy, -50);
-    // expect(ball.dy).to.equal(-50);
+    expect(ball.dy).to.equal(-5);
+    // not reversing upon collision
   });
 });
 

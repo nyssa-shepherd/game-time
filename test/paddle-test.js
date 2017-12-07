@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const { assert } = require('chai');
 const Paddle = require('../lib/Paddle.js');
 
-describe.only('Paddle', function() {
+describe('Paddle', function() {
 
   beforeEach(() => 
     paddle = new Paddle(100, 500, 50, 100, 10, 'green'),
