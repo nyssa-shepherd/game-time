@@ -21,7 +21,7 @@ describe('Paddle', function() {
     expect(paddle.x).to.equal(500);
     mouseX = 550;
     paddle.hoverPaddle(mouseX);
-    expect(paddle.x).to.equal(150);
+    expect(paddle.x).to.equal(0);
   })
 
   it('should move left when the mouse moves left', function() {
@@ -29,7 +29,7 @@ describe('Paddle', function() {
     expect(paddle.x).to.equal(500);
     mouseX = 450;
     paddle.hoverPaddle(mouseX);
-    expect(paddle.x).to.equal(50);
+    expect(paddle.x).to.equal(0);
   })
 });
 
