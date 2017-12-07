@@ -1,5 +1,4 @@
 const { expect } = require('chai');
-const { assert } = require('chai');
 const GamePieces = require('../lib/GamePieces.js');
 
 describe('GamePieces', function() {

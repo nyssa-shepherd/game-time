@@ -1,13 +1,16 @@
 const { expect } = require('chai');
 const { assert } = require('chai');
 const Brick = require('../lib/Brick.js');
+const Ball = require('../lib/Ball.js')
 
 let brick;
+let ball;
 
-describe('Brick', function() {
+describe.only('Brick', function() {
 
   beforeEach(() => {
     brick = new Brick(5, 50, 30, 90, 'pink');
+    ball = new Ball(5, 50, 10, 10)
   })
 
   it('should be a function', function() {
@@ -34,7 +37,12 @@ describe('Brick', function() {
     expect(brick.color).to.equal('pink');
   });
 
-// unsure if this is where we should put the brick collision tests 
-// probably best to put them in the game file
-
+  it('should return true if brick collides with the ball', function() {
+    expect(ball.x).to.equal(5);
+    expect(ball.y).to.equal(50);
+    expect(brick.x).to.equal(5)
+    assert.equal(brick.collisionDetection(ball), true);
+  });
 });
+
+
