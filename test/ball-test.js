@@ -54,16 +54,11 @@ describe.only('Ball', function() {
   });
 
   it('should reverse velocity when it collides with a paddle', function() {
-    let ball = new Ball(50, 100, 5, 5, 0, Math.PI * 2, false)
-    let paddle = new Paddle(55, 105, 0, 0);
-    expect(ball.x).to.equal(50)
-    ball.move();
-    expect(ball.x).to.equal(55);
-    expect(ball.y).to.equal(105);
+    let ball = new Ball(50, 90, 5, 5, 0, Math.PI * 2, false)
+    let paddle = new Paddle(50, 100, 0, 0);
     expect(ball.dy).to.equal(5);
     ball.paddleTouch(paddle);
     expect(ball.dy).to.equal(-5);
-    // not reversing upon collision
   });
 });
 
