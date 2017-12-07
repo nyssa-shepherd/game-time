@@ -7,7 +7,7 @@ body{
 }
 
 #game {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.65);
 }
 
 .trumpty-animation {
@@ -79,9 +79,24 @@ body{
   width: 750px;
 }
 
-/*#gameover-screen {
+#gameover-screen {
   background-image: url('./img/game-over-screen.png');
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: 101%;
+  display: none;
   height: 600px;
+  position: absolute;
   width: 750px;
-}*/
+}
+
+#directions-screen {
+  background-image: url('./img/directions.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 101%;
+  display: none;
+  height: 600px;
+  position: absolute;
+  width: 750px;
+}

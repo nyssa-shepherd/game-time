@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const { assert } = require('chai');
 const Paddle = require('../lib/Paddle.js');
 
-describe.only('Paddle', function() {
+describe('Paddle', function() {
 
   beforeEach(() => 
     paddle = new Paddle(100, 500, 50, 100, 10, 'green'),
@@ -16,18 +16,6 @@ describe.only('Paddle', function() {
     assert.isFunction(Paddle);
   });
 
-  it('should move left', function() {
-    expect(paddle.x).to.equal(100);
-    paddle.movePaddleLeft();
-    expect(paddle.x).to.equal(90);
-  });
-
-  it('should move right', function() {
-    expect(paddle.x).to.equal(100);
-    paddle.movePaddleRight();
-    expect(paddle.x).to.equal(110);
-  });
-
   it('should slide right', function() {
     expect(paddle.x).to.equal(100);
     paddle.slidePaddleRight();
@@ -39,4 +27,22 @@ describe.only('Paddle', function() {
     paddle.slidePaddleLeft();
     expect(paddle.x).to.equal(50);
   });
+
+  it('should move right when the mouse moves right', function() {
+    paddle.x = 500
+    expect(paddle.x).to.equal(500);
+    mouseX = 550;
+    paddle.hoverPaddle(mouseX);
+    expect(paddle.x).to.equal(150);
+  })
+
+  it('should move left when the mouse moves left', function() {
+    paddle.x = 500
+    expect(paddle.x).to.equal(500);
+    mouseX = 450;
+    paddle.hoverPaddle(mouseX);
+    expect(paddle.x).to.equal(50);
+  })
 });
+
+
