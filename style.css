@@ -85,3 +85,14 @@ body{
   height: 600px;
   width: 750px;
 }*/
+
+#pause-screen {
+  background-image: url('./img/pause-screen.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 101%;
+  display: none;
+  height: 600px;
+  position: absolute;
+  width: 750px;
+}
