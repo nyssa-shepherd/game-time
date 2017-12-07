@@ -20,7 +20,7 @@ body{
 }
 
 #start-screen {
-  background-image: url('./img/start-screen.png');
+  background-image: url('./img/game-screen.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 101%;
@@ -29,30 +29,42 @@ body{
   position: absolute;
   width: 750px;
 }
-/*
-#level2-screen {
-  background-image: url('./img/trumpty.png');
-  background-repeat: no-repeat;
-  height: 600px;
-  width: 750px;
-}*/
 
-/*#level3-screen {
-  background-image: url('./img/start-screen.png');
+#level2-screen {
+  background-image: url('./img/level-2-screen.png');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 101%;
+  display: none;
   height: 600px;
+  position: absolute;
+  width: 750px;
+}
+
+#level3-screen {
+  background-image: url('./img/level-3-screen.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 101%;
+  display: none;
+  height: 600px;
+  position: absolute;
   width: 750px;
 }
 
 #win-screen {
-  background-image: url('./img/start-screen.png');
+  background-image: url('./img/win-screen.png');
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: 101%;
+  display: none;
   height: 600px;
+  position: absolute;
   width: 750px;
 }
 
-#gameover-screen {
-  background-image: url('./img/trump-loser-tweet.png');
+/*#gameover-screen {
+  background-image: url('./img/game-over-screen.png');
   background-repeat: no-repeat;
   height: 600px;
   width: 750px;
