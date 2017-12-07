@@ -10,13 +10,29 @@ body{
     background: rgba(255, 255, 255, 0.6);
 }
 
+.trumpty-animation {
+  animation-delay: 0.5s;
+  animation-duration: 10s;
+  animation-name: transform;
+}
+
 #trumpty {
+
   height: 100px;
   left: 42em;
   top: 0;
   position: absolute;
-  width: 100px;
   z-index: 1;
+}
+
+@keyframes transform {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 4500px, 0);
+  }
 }
 
 #start-screen {
