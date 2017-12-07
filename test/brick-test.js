@@ -6,7 +6,7 @@ const Ball = require('../lib/Ball.js')
 let brick;
 let ball;
 
-describe.only('Brick', function() {
+describe('Brick', function() {
 
   beforeEach(() => {
     brick = new Brick(5, 50, 30, 90, 'pink');
@@ -40,7 +40,7 @@ describe.only('Brick', function() {
   it('should return true if brick collides with the ball', function() {
     expect(ball.x).to.equal(5);
     expect(ball.y).to.equal(50);
-    expect(brick.x).to.equal(5)
+    expect(brick.x).to.equal(5);
     assert.equal(brick.collisionDetection(ball), true);
   });
 });
