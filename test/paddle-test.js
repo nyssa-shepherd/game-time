@@ -16,18 +16,6 @@ describe('Paddle', function() {
     assert.isFunction(Paddle);
   });
 
-  it('should slide right', function() {
-    expect(paddle.x).to.equal(100);
-    paddle.slidePaddleRight();
-    expect(paddle.x).to.equal(150);
-  });
-
-  it('should slide left', function() {
-    expect(paddle.x).to.equal(100);
-    paddle.slidePaddleLeft();
-    expect(paddle.x).to.equal(50);
-  });
-
   it('should move right when the mouse moves right', function() {
     paddle.x = 500
     expect(paddle.x).to.equal(500);
