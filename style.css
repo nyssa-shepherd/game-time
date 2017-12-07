@@ -2,8 +2,7 @@ body{
   background-image: url('https://i.pinimg.com/originals/b9/e2/67/b9e26710f6423b8ac3c8116fc4b44d69.jpg');
   background-position: center;
   background-size: 100%;
-  padding: 5% 25%;
-
+  padding: 0 25%;
 }
 
 #game {
@@ -17,11 +16,10 @@ body{
 }
 
 #trumpty {
-
   height: 100px;
-  left: 42em;
-  top: 0;
-  position: absolute;
+  left: 20em;
+  top: 25px;
+  position: relative;
   z-index: 1;
 }
 
@@ -39,7 +37,7 @@ body{
   background-image: url('./img/game-screen.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 101%;
+  background-size: 100%;
   display: block;
   height: 600px;
   position: absolute;
@@ -90,8 +88,8 @@ body{
   width: 750px;
 }
 
-#directions-screen {
-  background-image: url('./img/directions.png');
+#pause-screen {
+  background-image: url('./img/pause-screen.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 101%;
@@ -99,4 +97,11 @@ body{
   height: 600px;
   position: absolute;
   width: 750px;
+}
+
+@media screen and (min-width: 1500px) {
+  
+  body {
+      padding: 0 30%;
+  }
 }
