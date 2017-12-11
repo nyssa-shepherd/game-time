@@ -60,5 +60,7 @@ describe('Ball', function() {
     ball.paddleTouch(paddle);
     expect(ball.dy).to.equal(-5);
   });
+
+  //check for ball reset
 });
 
