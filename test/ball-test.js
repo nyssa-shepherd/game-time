@@ -17,6 +17,10 @@ describe('Ball', function() {
     expect(new Ball()).to.be.an.instanceof(Ball);
   });
 
+  // it('expects to be a function', function() {
+  //   expect(bubbleSort).to.be.a('function');
+  // });
+
   it('should be a function', function() {
     assert.isFunction(Ball);
   });
