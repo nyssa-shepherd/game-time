@@ -5,13 +5,11 @@ const Brick = require('../lib/Brick.js');
 
 let game;
 let brick;
-let brick2;
 
 describe('Game', function() {
   beforeEach(() => {
     game = new Game()
     brick = new Brick();
-    brick2 = new Brick();
   });
 
   it('should exist as game', function() {
@@ -68,10 +66,6 @@ describe('Game', function() {
     expect(game.buildBricks).to.be.a('function');
   });
 
-  // it('should have a new instance of brick', function() {
-  //   var brick = new Brick();
-  // });
-
   it('should add a new brick to the brick array', function() {
     game.buildBricks();
     expect(game.brickArray.length).to.equal(game.levelArray.length);
@@ -79,18 +73,6 @@ describe('Game', function() {
 
   it('should have a level check function', function() {
     expect(game.levelCheck).to.be.a('function');
-  });
-
-  it.only('should increase a level when the brick array is empty', function() {
-    game.buildBricks();
-    console.log(game.brickArray)
-    expect(game.brickArray.length).to.equal(1);
-    expect(game.level).to.equal(0);
-    game.brickCollision();
-    console.log(game.brickArray)
-    // expect(game.brickArray.length).to.equal(0);
-    // game.levelCheck();
-    // expect(game.level).to.equal(1);
   });
 
 });
